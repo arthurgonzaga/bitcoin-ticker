@@ -9,7 +9,12 @@ app.get("/", function(req, res){
     res.sendFile(__dirname + "/index.html");
 });
 
-app.post("/", function(req,res){
+// PRICE
+app.get("/price", function(req,res){
+    res.sendFile(__dirname + "/price.html");
+})
+
+app.post("/price", function(req,res){
     var crypto = req.body.crypto;
     var fiat = req.body.money;
 
@@ -22,7 +27,14 @@ app.post("/", function(req,res){
         res.write("<p>"+ data.display_timestamp +"</p>")
         res.send();
     });
+});
+
+// CONVERSION
+app.get("/conversion", function(req,res){
+    res.sendFile(__dirname + "/conversion.html");
 })
+
+
 app.listen(3000, function(){
     console.log("Running on port 3000");
 });

@@ -2,49 +2,54 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Bitcoin Ticker</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-    
+        
         <style>
             body{
                 text-align: center;
             }
             h1{
-                font-size: 3rem;
+                margin-top: 10%;
+                font-size: 3.5rem;
             }
-
-            select{
-                margin: 15px;
-                width: 100px;
+            .first-row{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -90%);
             }
-            .container{
-                height: 100vmin;
-                padding: 35vh;
+            .card{
+                width: 25rem;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <h1>Bitcoin Ticker</h1>
-
-            <form action="/" method="POST">
-                <select name="crypto">
-                    <option selected value="BTC">Bitcoin</option>
-                    <option value="ETH">Etherium</option>
-                    <option value="LTC">Litecoin</option>
-                </select>
-                <select name="money">
-                    <option selected value="USD">Dollar</option>
-                    <option value="BRL">Real</option>
-                    <option value="EUR">Euro</option>
-                </select>
-                <br>
-                <button type="submit">Submit</button>
-            </form>
+            <div class="row first-row">
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Bitcoin price</h4>
+                            <p class="card-text">See the current price of bitcoin or anothers ones.</p>
+                            <a href="price" class="btn btn-success">Go to bitcoin price</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Bitcoin conversion <span class="badge badge-warning">New</span></h4>
+                            <p class="card-text">Convert bitcoin or another coin to your currency.</p>
+                            <a href="conversion" class="btn btn-success">Go to bitcoin conversion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
